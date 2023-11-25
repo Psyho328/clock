@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="startTime()">
+    <div class="bg">
+        <img id="morning" src="timeframe/morning.png">
+        <img id="afternoon" class="hide" src="timeframe/afternoon.png">
+        <img id="evening" class="hide" src="timeframe/evening.png">
+        <img id="night" class="hide" src="timeframe/night.png">
+    </div>
+    <main>
+        <span class="title">
+            <h2>JavaScript Clock</h2>
+            <div id="txt"></div>
+        </span>
+        <div class="clock">
+            <div class="base">
+                <span id="hour"></span>
+                <h4>Hours</h4>
+            </div>
+            <div class="base">
+                <span id="minute"></span>
+                <h4>Minutes</h4>
+            </div>
+            <div class="base">
+                <span id="second"></span>
+                <h4>Seconds</h4>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    padding-top: 2vh;
+}
+
+.clock {
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+html {
+    overflow: hidden;
+}
+
+.bg img {
+    position: absolute;
+    left: -1vw;
+    top: -1vh;
+    z-index: -5;
+    filter: blur(10px);
+}
+
+.bg .hide {
+    display: none;
+}
+
+#hour,
+#minute,
+#second {
+    position: absolute;
+    background: black;
+    border-image-slice: 50;
+    transform-origin: center;
+}
+
+#hour {
+    transition: transform 0.99s linear;
+}
+
+#minute {
+    transition: transform 0.99s linear;
+}
+
+#second {
+    transition: transform 0.99s linear;
+}
+
+#hour,
+#minute,
+#second {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+}
+
+.base {
+    height: 20vw;
+    width: 30vw;
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.base h4 {
+    position: relative;
+    display: inline;
+    z-index: 5;
+    top: 10vh;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100;
+    font-size: 1.2rem;
+}
+
+.title,
+.base h4 {
+    color: #EBE3D5;
+}
+
+@media (max-width: 1080px) {
+    body {
+        overflow: hidden;
+        position: absolute;
+    }
+
+    main {
+        width: 100vw;
+    }
+    
+    .title h2 {
+        font-size: 4rem;
+        font-weight: 100;
+    }
+
+    .title #txt {
+        font-size: 2rem;
+    }
+
+    .title {
+        position: relative;
+        top: 4vh;
+    }
+
+    .bg img {
+        height: 106vh;
+        overflow: hidden;
+    }
+
+    .clock {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18vh;
+    }
+
+    .base h4 {
+        top: 3vh;
+        font-size: 2.6rem;
+    }
+
+    #hour,
+    #minute,
+    #second {
+        height: 20vh;
+        width: 20vh;
+    }
+}
